@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+
+</head>
+
+<body>
+  <div class="signin">
+    <div class="back-img">
+      <div class="circle"></div>
+      <img src="https://www.svgrepo.com/show/192247/man-user.svg">
+    </div>
+    <!--/.back-img-->
+    <div class="form-section">
+      <div>
+        <h1>Iniciar Sesión</h1>
+        <form method="POST">
+          <!--Email-->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label>Número de tarjeta</label><br>
+            <input type="text" id="sample3" name="card">
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label>DNI</label>
+            <input type="text" id="sample3" name="dni">
+          </div>
+          <!--Password-->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label>Contraseña</label>
+            <input type="password" id="sample3" name="password">
+          </div>
+          <br />
+          {% if incorrect == True %}
+          <p style="color:red"> Usuario o Contraseña incorrectos </p>
+          {% elif invalid_user == True %}
+          <p style="color:red"> Tu no eres {{username}} </p>
+          {% endif %}
+          <!--CheckBox-->
+          <button type="submit"
+            class="sign-in-btn">
+            Sign In 
+          </button>
+          <p class="forgot-text">Aun No tienes Cuenta? <a href="./register">Registrate</a></p>
+          <!--/button-->
+        </form>
+      </div>
+      <br>
+
+    </div>
+    <!--/.form-section-->
+
+  </div>
+  <!--/.signin-->
+</body>
+
+</html>

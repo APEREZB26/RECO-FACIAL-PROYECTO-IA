@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Register Page</title>
+</head>
+
+<body>
+        <section class="containerReg">
+            <div class="user singupBx">
+                <div class="formBx">
+                    <form method="post">
+                        <h2>Sing Up</h2>
+                        <input type="text" name="card" placeholder="N° Tarjeta" class="data" />
+                        <input type="text" name="fullname" placeholder="Nombres/Apellidos" class="data" />
+                        <input type="email" name="email" placeholder="example@gmail.com" class="data" />
+                        <input type="text" name="dni" placeholder="N° Dni" class="data" />
+                        <input type="password" name="password" placeholder="Contraseña" class="data" />
+                        <input type="submit" value="Register" class="reg-button" />
+                        <p class="signup">
+                            ¿Tienes una cuenta?
+                            <a href="./login">Inicia Sesión</a>
+                        </p>
+                    </form>
+                </div>
+                <div class="imgBxR">
+                    <div class="bubbleR">Inicia Tu Cuenta Ahora y Disfruta de los Beneficios</div>
+                    <img src="https://i.ibb.co/WPsypyY/undraw-make-it-rain-iwk4.png" alt="img" />
+                </div>
+            </div>
+        </section>
+</body>
+
+</html>
