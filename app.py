@@ -75,15 +75,11 @@ def register():
         db.session.commit()
         print("registradoooo")
 
-        os.mkdir(f'face_recognition_and_liveness/face_recognition/dataset/{fullname}')
-
         cap = cv2.VideoCapture(1)
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 2560)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 2560)
 
         ret, frame = cap.read()
-
-        cv2.imwrite('C:/Users/Usuario/Desktop/armando.jpg',frame)
         cap.release()
 
         return redirect(url_for('login'))
